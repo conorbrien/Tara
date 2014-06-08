@@ -115,9 +115,11 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 5b1f097c4e72802408ee9eebbb196089, type: 2}
+  - {fileID: 2100000, guid: bb3d8f936a814db41ba645485af8784a, type: 2}
   - {fileID: 2100000, guid: 265a143f9accf3a468cd339fda36be34, type: 2}
   - {fileID: 2100000, guid: 77fb1418a093d7949a79382dc346c0bf, type: 2}
+  - {fileID: 2100000, guid: 5b1f097c4e72802408ee9eebbb196089, type: 2}
+  - {fileID: 2100000, guid: 39d389b44ece3bd4ebc9fd2ad9758be3, type: 2}
   - {fileID: 2100000, guid: fc00bb9e5401b9c4bbb69ddec2e9ab93, type: 2}
   - {fileID: 2100000, guid: 830fa38570d94b941bacf49412f15a5f, type: 2}
   - {fileID: 2100000, guid: 684ba53e4ddc88648a0c5eb150509b75, type: 2}
