@@ -8,14 +8,64 @@ ModelImporter:
     100004: Camera001
     100006: Camera001.Target
     100008: //RootNode
+    100010: MainWindow
+    100012: BackWindow1
+    100014: BackWindow2
+    100016: BackWindow3
+    100018: Floor
+    100020: FrontWindow1
+    100022: FrontWindow2
+    100024: FrontWindow3
+    100026: Main Door
+    100028: MainDoorTMolding
     400000: Bar
     400002: Box001
     400004: Camera001
     400006: Camera001.Target
     400008: //RootNode
+    400010: MainWindow
+    400012: BackWindow1
+    400014: BackWindow2
+    400016: BackWindow3
+    400018: Floor
+    400020: FrontWindow1
+    400022: FrontWindow2
+    400024: FrontWindow3
+    400026: Main Door
+    400028: MainDoorTMolding
     2300000: Bar
+    2300002: MainWindow
+    2300004: BackWindow1
+    2300006: BackWindow2
+    2300008: BackWindow3
+    2300010: Floor
+    2300012: FrontWindow1
+    2300014: FrontWindow2
+    2300016: FrontWindow3
+    2300018: Main Door
+    2300020: MainDoorTMolding
     3300000: Bar
+    3300002: MainWindow
+    3300004: BackWindow1
+    3300006: BackWindow2
+    3300008: BackWindow3
+    3300010: Floor
+    3300012: FrontWindow1
+    3300014: FrontWindow2
+    3300016: FrontWindow3
+    3300018: Main Door
+    3300020: MainDoorTMolding
     4300000: Bar
+    4300002: MainWindow
+    4300004: FrontWindow3
+    4300006: FrontWindow2
+    4300008: FrontWindow1
+    4300010: BackWindow1
+    4300012: BackWindow2
+    4300014: BackWindow3
+    4300016: Floor
+    4300018: Main Door
+    4300020: MainDoorTMolding
     9500000: //RootNode
   materials:
     importMaterials: 1
