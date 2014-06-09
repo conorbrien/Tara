@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b577c3569e202854896c81feccde3824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseOver: 0
+  texturecolorused: {r: .80392158, g: .368627459, b: 0, a: 1}
   cardButton: {fileID: 0}
   cardButtonButtonXDivision: 1.91999996
   cardButtonButtonYDivision: .560000002

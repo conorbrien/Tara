@@ -4,17 +4,20 @@ using System.Collections;
 public class Interface : MonoBehaviour
 {
 
-	public bool mouseOver =false;
+	public Color texturecolorused;
+	bool mouseOver =false;
+	bool mouseClick = false;
 	public Texture cardButton;
 	public float cardButtonButtonXDivision;
 	public float cardButtonButtonYDivision;
 	public float cardButtonRectWidthDivision;
 	public float cardButtonRectHeightDivision;
+	Color originalColor;
 
 	//This can be changed to Update when testing resolutions
-	void Update()
+	void Start()
 	{
-
+		originalColor = guiTexture.color;
 		cardButton = this.GetComponent<GUITexture> ().texture;
 		float buttonX = (Screen.width - (cardButton.width /cardButtonButtonXDivision));
 		float buttonY = (Screen.height -(cardButton.height /cardButtonButtonYDivision));
@@ -33,10 +36,28 @@ public class Interface : MonoBehaviour
 
 	void OnMouseExit()
 	{
-		mouseOver = false;
+		if (mouseClick == false) 
+		{
+			mouseOver = false;
+			Color textureColor = guiTexture.color;
+			textureColor.a = .128f;
+			guiTexture.color = textureColor;
+		}
+	}
 
-		Color textureColor = guiTexture.color;
-		textureColor.a = .128f;
-		guiTexture.color = textureColor;
+	void OnMouseDown()
+	{
+		if (mouseClick == false) 
+		{
+			Color textureColor = guiTexture.color;
+			textureColor.a = 1f;
+			mouseClick = !mouseClick;
+			guiTexture.color = texturecolorused;
+		}
+		else 
+		{
+			mouseClick = !mouseClick;
+			guiTexture.color = originalColor;
+		}
 	}
 }
