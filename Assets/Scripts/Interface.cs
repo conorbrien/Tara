@@ -3,18 +3,27 @@ using System.Collections;
 
 public class Interface : MonoBehaviour
 {
-	public Texture moneyButton;
-	public bool mouseOver =false;
 
-	void OnGUI()
+	public bool mouseOver =false;
+	public Texture cardButton;
+	public float cardButtonButtonXDivision;
+	public float cardButtonButtonYDivision;
+	public float cardButtonRectWidthDivision;
+	public float cardButtonRectHeightDivision;
+
+	//This can be changed to Update when testing resolutions
+	void Start()
 	{
 
-		float buttonX = (Screen.width - (moneyButton.width /2.2f));
-		float buttonY = (Screen.height -(moneyButton.height /2.2f));
-
-		GUI.DrawTexture( new Rect(buttonX, buttonY, moneyButton.width /2.2f, moneyButton.height /2.2f),moneyButton, ScaleMode.ScaleToFit, true); 
+		cardButton = this.GetComponent<GUITexture> ().texture;
+		float buttonX = (Screen.width - (cardButton.width /cardButtonButtonXDivision));
+		float buttonY = (Screen.height -(cardButton.height /cardButtonButtonYDivision));
+		Rect inset = new Rect(buttonX, buttonY, cardButton.width / cardButtonRectWidthDivision, cardButton.height / cardButtonRectHeightDivision);
+		this.GetComponent<GUITexture> ().pixelInset = inset;
+	
 	}
-	void onMouseOver()
+
+	void onMouseEnter()
 	{
 		mouseOver = true;
 		Debug.Log ("Entered");
