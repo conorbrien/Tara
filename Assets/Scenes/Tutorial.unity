@@ -692,6 +692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyButton: {fileID: 2800000, guid: 44573deb58750d442933b3279df941d7, type: 3}
+  mouseOver: 0
 --- !u!4 &1657698115
 Transform:
   m_ObjectHideFlags: 0
