@@ -251,6 +251,70 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1699687002}
   m_GameObject: {fileID: 180562643}
   m_Mesh: {fileID: 4300014, guid: 2c2ea6978461b054b9809fdf44557a69, type: 3}
+--- !u!1 &187409669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 187409672}
+  - 131: {fileID: 187409671}
+  - 114: {fileID: 187409670}
+  m_Layer: 0
+  m_Name: moneyCard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &187409670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 187409669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b577c3569e202854896c81feccde3824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseOver: 0
+  cardButton: {fileID: 0}
+  cardButtonButtonXDivision: 1.91999996
+  cardButtonButtonYDivision: .560000002
+  cardButtonRectWidthDivision: 2
+  cardButtonRectHeightDivision: 2
+--- !u!131 &187409671
+GUITexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 187409669}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: 44573deb58750d442933b3279df941d7, type: 3}
+  m_Color: {r: .5, g: .5, b: .5, a: .156862751}
+  m_PixelInset:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
+--- !u!4 &187409672
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 187409669}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1657698115}
 --- !u!1 &309384915
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +736,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1657698115}
-  - 114: {fileID: 1657698114}
   m_Layer: 0
   m_Name: GUI
   m_TagString: Untagged
@@ -680,19 +743,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1657698114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1657698113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b577c3569e202854896c81feccde3824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moneyButton: {fileID: 2800000, guid: 44573deb58750d442933b3279df941d7, type: 3}
-  mouseOver: 0
 --- !u!4 &1657698115
 Transform:
   m_ObjectHideFlags: 0
@@ -702,7 +752,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 187409672}
   m_Father: {fileID: 0}
 --- !u!1001 &1699687002
 Prefab:

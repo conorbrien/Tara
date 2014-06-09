@@ -12,7 +12,7 @@ public class Interface : MonoBehaviour
 	public float cardButtonRectHeightDivision;
 
 	//This can be changed to Update when testing resolutions
-	void Start()
+	void Update()
 	{
 
 		cardButton = this.GetComponent<GUITexture> ().texture;
@@ -23,15 +23,20 @@ public class Interface : MonoBehaviour
 	
 	}
 
-	void onMouseEnter()
+	void OnMouseOver()
 	{
 		mouseOver = true;
-		Debug.Log ("Entered");
+		Color textureColor = guiTexture.color;
+		textureColor.a = 1f;
+		guiTexture.color = textureColor;
 	}
 
-	void onMouseExit()
+	void OnMouseExit()
 	{
 		mouseOver = false;
-		Debug.Log ("Exited");
+
+		Color textureColor = guiTexture.color;
+		textureColor.a = .128f;
+		guiTexture.color = textureColor;
 	}
 }
