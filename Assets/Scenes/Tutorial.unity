@@ -283,6 +283,7 @@ MonoBehaviour:
   cardButton: {fileID: 0}
   nativeWidth: 1980
   nativeHeight: 1080
+  masterScale: 1.5
   fromRight: 2
 --- !u!131 &187409671
 GUITexture:
@@ -652,6 +653,7 @@ MonoBehaviour:
   cardButton: {fileID: 0}
   nativeWidth: 1980
   nativeHeight: 1080
+  masterScale: 1.5
   fromRight: 1
 --- !u!131 &1117937411
 GUITexture:

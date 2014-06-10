@@ -26,6 +26,9 @@ public class Interface : MonoBehaviour
 	public float nativeWidth;
 	public float nativeHeight;
 
+	//Declares a public float to be used as Texture Master Scale
+	public float masterScale;
+
 	//Iteration Float (For multiple textures)
 	public float fromRight;
 
@@ -48,13 +51,13 @@ public class Interface : MonoBehaviour
 		guiRatioY = Screen.height /nativeHeight;
 
 		//Calculates the Start position for X Based off Current ScreenWidth and the texture size (and its ratio scale)
-		float buttonX = Screen.width - ((cardButton.width *guiRatioX) * fromRight);
+		float buttonX = Screen.width - (((cardButton.width *guiRatioX) / masterScale )* fromRight);
 
 		//Calculates the Start position for Y Based off Current ScreenHeight and the texture size (and its ratio scale)
 		float buttonY = Screen.height - Screen.height;
 
 		//Creates the Rectangle for the UI Based off buttonX and buttonY above, multiplies the cardButton width and Height by Ratio so its the correct scale
-		Rect inset = new Rect(buttonX, buttonY, cardButton.width * guiRatioX, cardButton.height * guiRatioY);
+		Rect inset = new Rect(buttonX, buttonY, (cardButton.width * guiRatioX) / masterScale, (cardButton.height * guiRatioY) / masterScale);
 
 		//Set the pixelInset value of GUI Texture to the rectangle declared above
 		this.GetComponent<GUITexture> ().pixelInset = inset;
