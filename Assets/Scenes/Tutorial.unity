@@ -281,10 +281,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texturecolorused: {r: .80392158, g: .368627459, b: 0, a: 1}
   cardButton: {fileID: 0}
-  cardButtonButtonXDivision: 1.91999996
-  cardButtonButtonYDivision: .560000002
-  cardButtonRectWidthDivision: 2
-  cardButtonRectHeightDivision: 2
+  nativeWidth: 1980
+  nativeHeight: 1080
+  fromRight: 1
 --- !u!131 &187409671
 GUITexture:
   m_ObjectHideFlags: 0

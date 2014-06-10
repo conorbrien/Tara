@@ -26,6 +26,9 @@ public class Interface : MonoBehaviour
 	public float nativeWidth;
 	public float nativeHeight;
 
+	//Iteration Float (For multiple textures)
+	public float fromRight;
+
 	//Function called at Start
 	void Start()
 	{
@@ -45,7 +48,7 @@ public class Interface : MonoBehaviour
 		guiRatioY = Screen.height /nativeHeight;
 
 		//Calculates the Start position for X Based off Current ScreenWidth and the texture size (and its ratio scale)
-		float buttonX = Screen.width - (cardButton.width *guiRatioX);
+		float buttonX = Screen.width - ((cardButton.width *guiRatioX) * fromRight);
 
 		//Calculates the Start position for Y Based off Current ScreenHeight and the texture size (and its ratio scale)
 		float buttonY = Screen.height - Screen.height;
