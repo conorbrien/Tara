@@ -284,7 +284,7 @@ MonoBehaviour:
   nativeWidth: 1980
   nativeHeight: 1080
   masterScale: 1.5
-  fromRight: 3
+  fromRight: 5
 --- !u!131 &187409671
 GUITexture:
   m_ObjectHideFlags: 0
@@ -654,7 +654,7 @@ MonoBehaviour:
   nativeWidth: 1980
   nativeHeight: 1080
   masterScale: 1.5
-  fromRight: 1
+  fromRight: 4
 --- !u!131 &1117937411
 GUITexture:
   m_ObjectHideFlags: 0
@@ -830,6 +830,70 @@ GUITexture:
   m_RightBorder: 0
   m_TopBorder: 0
   m_BottomBorder: 0
+--- !u!1 &1397452765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1397452768}
+  - 131: {fileID: 1397452767}
+  - 114: {fileID: 1397452766}
+  m_Layer: 0
+  m_Name: settingsCard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1397452766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1397452765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b577c3569e202854896c81feccde3824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texturecolorused: {r: .80392158, g: .368627459, b: 0, a: 1}
+  cardButton: {fileID: 2800000, guid: 60fb6d314cd577e4da20ee22caf8ba43, type: 3}
+  nativeWidth: 1980
+  nativeHeight: 1080
+  masterScale: 1.5
+  fromRight: 1
+--- !u!131 &1397452767
+GUITexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1397452765}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: 60fb6d314cd577e4da20ee22caf8ba43, type: 3}
+  m_Color: {r: .5, g: .5, b: .5, a: .156862751}
+  m_PixelInset:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
+--- !u!4 &1397452768
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1397452765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1657698115}
 --- !u!1 &1518210095
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,8 +946,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 187409672}
+  - {fileID: 1810830170}
   - {fileID: 1351434724}
   - {fileID: 1117937412}
+  - {fileID: 1397452768}
   m_Father: {fileID: 0}
 --- !u!1001 &1699687002
 Prefab:
@@ -1041,6 +1107,70 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1699687002}
   m_GameObject: {fileID: 1728019308}
   m_Mesh: {fileID: 4300012, guid: 2c2ea6978461b054b9809fdf44557a69, type: 3}
+--- !u!1 &1810830169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1810830170}
+  - 131: {fileID: 1810830172}
+  - 114: {fileID: 1810830171}
+  m_Layer: 0
+  m_Name: suppliesCard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1810830170
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1810830169}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1657698115}
+--- !u!114 &1810830171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1810830169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b577c3569e202854896c81feccde3824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texturecolorused: {r: .80392158, g: .368627459, b: 0, a: 1}
+  cardButton: {fileID: 0}
+  nativeWidth: 1980
+  nativeHeight: 1080
+  masterScale: 1.5
+  fromRight: 3
+--- !u!131 &1810830172
+GUITexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1810830169}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: 6449fe983323ec24b93f80d5f78b565e, type: 3}
+  m_Color: {r: .5, g: .5, b: .5, a: .156862751}
+  m_PixelInset:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
 --- !u!1 &1995723211
 GameObject:
   m_ObjectHideFlags: 0
