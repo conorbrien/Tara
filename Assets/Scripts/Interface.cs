@@ -8,22 +8,50 @@ public class Interface : MonoBehaviour
 	bool mouseOver =false;
 	bool mouseClick = false;
 	public Texture cardButton;
-	public float cardButtonButtonXDivision;
-	public float cardButtonButtonYDivision;
-	public float cardButtonRectWidthDivision;
-	public float cardButtonRectHeightDivision;
 	Color originalColor;
+	public float guiRatioX;
+	public float guiRatioY;
+	public float nativeWidth;
+	public float nativeHeight;
+	public float adjustedWidth;
+	public float multiplyFactor;
+	public float insetX;
+	public float insetY;
+	public float insetWidth;
+	public float insetHeight;
+
 
 	//This can be changed to Update when testing resolutions
 	void Start()
 	{
+
+
 		originalColor = guiTexture.color;
 		cardButton = this.GetComponent<GUITexture> ().texture;
-		float buttonX = (Screen.width - (cardButton.width /cardButtonButtonXDivision));
-		float buttonY = (Screen.height -(cardButton.height /cardButtonButtonYDivision));
-		Rect inset = new Rect(buttonX, buttonY, cardButton.width / cardButtonRectWidthDivision, cardButton.height / cardButtonRectHeightDivision);
+	}
+
+	void OnGUI()
+	{
+		guiRatioX = Screen.width /nativeWidth;
+		guiRatioY = Screen.height /nativeHeight;
+		
+		multiplyFactor = (guiRatioX + guiRatioY) /2;
+		
+		insetX = this.GetComponent<GUITexture>().pixelInset.x;
+		insetY = this.GetComponent<GUITexture>().pixelInset.y;
+		insetWidth = this.GetComponent<GUITexture>().pixelInset.width;
+		insetHeight = this.GetComponent<GUITexture>().pixelInset.height;
+		adjustedWidth = nativeWidth * (guiRatioX / guiRatioY);
+
+		//Rect inset = new Rect(0, 0, cardButton.width, cardButton.height);
+		insetX *= multiplyFactor;
+		insetY *= multiplyFactor;
+		insetWidth *= multiplyFactor;
+		insetHeight *= multiplyFactor;
+		Rect inset = new Rect(0, 0, cardButton.width * guiRatioX, cardButton.height *guiRatioY);
+		//Rect inset = new Rect(insetX, insetY, insetWidth, insetHeight);
 		this.GetComponent<GUITexture> ().pixelInset = inset;
-	
+
 	}
 
 	void OnMouseOver()
