@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 2c2ea6978461b054b9809fdf44557a69
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: Bar
     100002: Box001
@@ -19,6 +19,9 @@ ModelImporter:
     100026: Main Door
     100028: MainDoorTMolding
     100030: Terrain
+    100032: Box002
+    100034: LadiesDoor
+    100036: MensDoor
     400000: Bar
     400002: Box001
     400004: Camera001
@@ -35,6 +38,9 @@ ModelImporter:
     400026: Main Door
     400028: MainDoorTMolding
     400030: Terrain
+    400032: Box002
+    400034: LadiesDoor
+    400036: MensDoor
     2300000: Bar
     2300002: MainWindow
     2300004: BackWindow1
@@ -47,6 +53,10 @@ ModelImporter:
     2300018: Main Door
     2300020: MainDoorTMolding
     2300022: Terrain
+    2300024: Box001
+    2300026: Box002
+    2300028: LadiesDoor
+    2300030: MensDoor
     3300000: Bar
     3300002: MainWindow
     3300004: BackWindow1
@@ -59,6 +69,10 @@ ModelImporter:
     3300018: Main Door
     3300020: MainDoorTMolding
     3300022: Terrain
+    3300024: Box001
+    3300026: Box002
+    3300028: LadiesDoor
+    3300030: MensDoor
     4300000: Bar
     4300002: MainWindow
     4300004: FrontWindow3
@@ -71,6 +85,10 @@ ModelImporter:
     4300018: Main Door
     4300020: MainDoorTMolding
     4300022: Terrain
+    4300024: Box001
+    4300026: Box002
+    4300028: LadiesDoor
+    4300030: MensDoor
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -123,4 +141,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
+  additionalBone: 0
   userData: 
