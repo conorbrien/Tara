@@ -25,41 +25,62 @@ public class CameraControl : MonoBehaviour
 		//Left
 		if (Input.GetKey (KeyCode.A)) 
 		{
-			posX += cameraVelocity*Time.deltaTime;
-			posZ -= cameraVelocity*Time.deltaTime;
-			transform.position = new Vector3(posX,posY,posZ);
+			if (posX < 1.803896)
+			{
+				posX += cameraVelocity*Time.deltaTime;
+				//posZ -= cameraVelocity*Time.deltaTime;
+				transform.position = new Vector3(posX,posY,posZ);
+			}
 		}
 		//Right
 		if (Input.GetKey (KeyCode.D)) 
 		{
-			posX -= cameraVelocity*Time.deltaTime;
-			posZ += cameraVelocity*Time.deltaTime;
-			transform.position = new Vector3(posX,posY,posZ);
+			if (posX > 0.5800563)
+			{
+				posX -= cameraVelocity*Time.deltaTime;
+				//posZ += cameraVelocity*Time.deltaTime;
+				transform.position = new Vector3(posX,posY,posZ);
+			}
 		}	
 
+		//Down
 		if (Input.GetKey (KeyCode.S)) 
 		{
-			posZ += cameraVelocity*Time.deltaTime;
-			transform.position = new Vector3(posX,posY,posZ);
+			if (posZ < 1.621507)
+			{
+				posZ += cameraVelocity*Time.deltaTime;
+				transform.position = new Vector3(posX,posY,posZ);
+			}
 		}	
 
+		//Up
 		if (Input.GetKey (KeyCode.W)) 
 		{
-			posZ -= cameraVelocity*Time.deltaTime;
-			transform.position = new Vector3(posX,posY,posZ);
+			if (posZ > 1.016423)
+			{
+				posZ -= cameraVelocity*Time.deltaTime;
+				transform.position = new Vector3(posX,posY,posZ);
+			}
 		}	
 
-
+		//Zoom Out
 		if (Input.GetAxis("Mouse ScrollWheel") < 0) 
 		{
-			posY += zoomVelocity*Time.deltaTime;
-			transform.position = new Vector3(posX,posY,posZ);
+			if(posY < 2.27438)
+			{
+				posY += zoomVelocity*Time.deltaTime;
+				transform.position = new Vector3(posX,posY,posZ);
+			}
 		}
-		//Down
+
+		//Zoom In
 		if (Input.GetAxis("Mouse ScrollWheel") > 0) 
 		{
-			posY -= zoomVelocity*Time.deltaTime;
-			transform.position = new Vector3(posX,posY,posZ);
+			if(posY > 1.58801)
+			{
+				posY -= zoomVelocity*Time.deltaTime;
+				transform.position = new Vector3(posX,posY,posZ);
+			}
 		}
 	}
 }
